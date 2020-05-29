@@ -1,0 +1,4 @@
+/keys/*
+!/keys/.gitkeep
+/database/*
+!/database/.gitkeep

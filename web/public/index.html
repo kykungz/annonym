@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annonym | The Annonymous Social Media</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 mb-4">Welcome to Annonym</h1>
+      <p class="lead">The <span id="annonymous" class="text-light bg-dark p-2">annonymous</span> Social Media for SKE
+        students</p>
+      <hr class="my-4">
+
+      <div id="jumbotron-login">
+        <p>You haven't set up an <b>Annonym</b> account yet. Please create an account to get a annoymous name.</p>
+        <button id="create-account-button" class="btn btn-primary btn-lg">Create an Annonym account</button>
+      </div>
+
+      <div id="jumbotron-post" style="display: none">
+        <p>Hello <span id="name" class="text-light bg-dark p-2"></span>, how are you feeling today?</p>
+        <button id="create-post-button" class="btn btn-primary btn-lg mt-3">Write a post</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="create-post-modal" tabindex="-1" role="dialog" aria-labelledby="create-post-modal-label"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="create-post-modal-label">Writing a post</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="create-post-modal-content" class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="create-post-content">How are you feeling today?</label>
+              <img id="create-post-photo" class="img-fluid mb-3" src="" alt="">
+              <textarea class="form-control" id="create-post-content" rows="5"></textarea>
+            </div>
+            <div class="input-group mb-3">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" accept="image/*" id="create-post-photo-input"
+                  aria-describedby="inputGroupFileAddon01">
+                <label class="custom-file-label" for="inputGroupFile01">Upload photo</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="create-post-button-discard" type="button" class="btn btn-outline-danger">Discard</button>
+          <button id="create-post-button-publish" type="button" class="btn btn-primary">Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="create-account-modal" tabindex="-1" role="dialog"
+    aria-labelledby="create-account-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="create-account-modal-label">Creating an account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="create-account-modal-content" class="modal-body">
+          By creating an <b>Annonym</b> account, we will assign you an <b>annonymous</b> name, click <b>Create</b> to
+          continue.
+        </div>
+        <div class="modal-footer">
+          <button id="create-account-button-continue" type="button" class="btn btn-primary">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-spinner" class="position-fixed justify-content-center align-items-center"
+    style="display: flex; z-index: 99999999; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); transition: all 300ms;">
+    <div class="spinner-border text-light" style="width: 60px; height: 60px;" role="status">
+      <span class="sr-only">Creating...</span>
+    </div>
+  </div>
+
+  <div id="posts" class="py-2" style="margin: auto; width: 100%; max-width: 500px;"></div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
