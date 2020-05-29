@@ -30,10 +30,11 @@ const loadPosts = async () => {
   const posts = await res.json()
   const postsHTML = posts
     .map(
+      // prettier-ignore
       (post) => /* html */ `
       <div class="card mb-3">
         <div class="card-body">
-          <img class="img-fluid mb-4" src="${post.photoUrl}" alt=""/>
+          <img class="img-fluid mb-4" src="${post.photoUrl}" style="${post.photoUrl ? "" : "display: none"}" alt=""/>
           <p>${post.content}</p>
           <p class="text-right">From: <b>${post.author}</b></p>
         </div>

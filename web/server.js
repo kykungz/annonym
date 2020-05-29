@@ -142,11 +142,11 @@ app.get('/clear', async (req, res) => {
     },
     {
       userId: 2,
-      content: `One more month until I can see my friends again... Let\'s do this gamers!!`,
+      content: `One more month until I can see my friends again... hang tight gamers!!`,
     },
     {
       userId: 1,
-      content: 'save lives keep distance wash your mask and wear masks 🙏🏼🙏🏼🙏🏼',
+      content: 'save lives keep distance wash your mask and wear masks',
     },
   ]
 
