@@ -7,7 +7,8 @@ class Database {
   }
 
   async connect() {
-    const connection = await mysql.createConnection({
+    const pool = await mysql.createPool({
+      connectionLimit: 8,
       host: config.DB_HOST,
       user: config.DB_USER,
       password: config.DB_PASSWORD,
@@ -15,7 +16,7 @@ class Database {
       charset: 'utf8_unicode_ci',
     })
 
-    this.connection = connection
+    this.connection = pool
   }
 }
 
